@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Protest Riot", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(images/cat.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #838399;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#todo-app {
+  width: 180%;
+  max-width: 480px;
+  margin: 200px auto 20px;
+  padding: 50px 30px 80px;
+  background: #fef2f4;
+  border-radius: 30px;
+}
+
+/* starts todo form */
+#todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#todo-form input[type="text"] {
+  width: 90%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #babad6;
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+#todo-form button {
+  padding: 12px 12px;
+  margin-bottom: 10px;
+  background-color: #838399;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+#todo-form button:hover {
+  color: black;
+  opacity: 0.6;
+}
+/* end todo form */
+
+/* starts todo list */
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+#todo-list li {
+  background-color: #babad6;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.check-box{
+    height: 20px;
+    width: 25px; 
+    background-color: none;
+} 
+.task-text{
+    outline: none;
+    width: 250px;
+    color: #515051;
+    font-size: 1rem;
+}
+input{
+    outline: none;
+    width: 250px;
+    color: #515051;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+}
+.edit-button {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #3b3e40;
+  background: none;
+  cursor: pointer;
+}
+.delete-button {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #ea7565;
+  background: none;
+  cursor: pointer;
+}
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.6;
+}
+/* end todo list */
