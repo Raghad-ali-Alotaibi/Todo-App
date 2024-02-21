@@ -101,4 +101,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-new li("Attend a zoom meeting");
