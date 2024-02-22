@@ -65,6 +65,17 @@ h1 {
 }
 /* end todo form */
 
+/* starts counter  */
+#task-counters {
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  color: #5d5d6c;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+/* end counter */
+
 /* starts todo list */
 #todo-list {
   list-style: none;
@@ -80,24 +91,24 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.check-box{
-    height: 20px;
-    width: 25px; 
-    background-color: none;
-} 
-.task-text{
-    outline: none;
-    width: 250px;
-    color: #515051;
-    font-size: 1rem;
+.check-box {
+  height: 20px;
+  width: 25px;
+  background-color: none;
 }
-input{
-    outline: none;
-    width: 250px;
-    color: #515051;
-    background: transparent;
-    border: none;
-    font-size: 1rem;
+.task-text {
+  outline: none;
+  width: 250px;
+  color: #515051;
+  font-size: 1rem;
+}
+input {
+  outline: none;
+  width: 250px;
+  color: #515051;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
 }
 .edit-button {
   font-size: 1rem;

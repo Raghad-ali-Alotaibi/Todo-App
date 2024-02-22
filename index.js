@@ -1,12 +1,20 @@
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");
+const totalCounter = document.getElementById("total-counter");
 
+// update Counters
+function updateCounters() {
+  const totalTasks = document.querySelectorAll("li:not(.completed)").length;
+  totalCounter.textContent = totalTasks;
+  // localStorage.setItem("total", JSON.stringify(totalTasks));
+  // localStorage.getItem("total");
+}
 
 // Add Event Listener for Form Submission
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const newTask = todoInput.value;
+  const newTask = todoInput.value.trim();
 
   if (newTask === "") {
     alert("Please enter a task!");
@@ -14,6 +22,7 @@ todoForm.addEventListener("submit", function (event) {
   }
   todoInput.value = "";
   addTask(newTask);
+  updateCounters(); 
 });
 
 // Create a Function to Add Tasks
@@ -23,32 +32,30 @@ function addTask(task) {
   // create checkBox
   const checkBox = document.createElement("input");
   checkBox.setAttribute("type", "checkbox");
-  checkBox.classList.add('check-box');
+  checkBox.classList.add("check-box");
   listItem.appendChild(checkBox);
 
   // create taskText
   const taskText = document.createElement("span");
   taskText.textContent = task;
-  taskText.classList.add('task-text');
+  taskText.classList.add("task-text");
   listItem.appendChild(taskText);
 
   // create Edit button
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
-  editButton.classList.add('edit-button');
+  editButton.classList.add("edit-button");
   listItem.appendChild(editButton);
 
   // create Delete button
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
-  deleteButton.classList.add('delete-button');
+  deleteButton.classList.add("delete-button");
   listItem.appendChild(deleteButton);
 
-  
   todoList.appendChild(listItem);
 
-
-//   Task Completion 
+  //   Task Completion
   checkBox.addEventListener("change", function () {
     if (this.checked) {
       taskText.style.textDecoration = "line-through";
@@ -57,9 +64,11 @@ function addTask(task) {
     }
   });
 
-// Task Deletion
+  // Task Deletion
   deleteButton.addEventListener("click", function () {
     todoList.removeChild(listItem);
+    updateCounters();
+    saveTasksToLocalStorage();
   });
 
   editButton.addEventListener("click", function () {
@@ -83,6 +92,7 @@ function addTask(task) {
   saveTasksToLocalStorage();
 }
 
+
 // Saving Tasks to Local Storage
 function saveTasksToLocalStorage() {
   const tasks = [];
@@ -100,4 +110,3 @@ document.addEventListener("DOMContentLoaded", function () {
     addTask(task.text);
   });
 });
-
