@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   background: url(images/cat.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,3 +131,61 @@ input {
   opacity: 0.6;
 }
 /* end todo list */
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+    max-height: 100vh;
+    background: url(images/phone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #838399;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  #todo-app {
+    width: 80%;
+    max-width: 380px;
+  }
+  #todo-form input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  #todo-form button {
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+  }
+  #task-counters {
+    font-size: 0.9rem;
+  }
+  #todo-list li {
+    background-color: #babad6;
+    width: 100%;
+    padding: 7px;
+  }
+  .check-box {
+    height: 18px;
+  }
+  .task-text {
+    width: 90px;
+    font-size: 0.8rem;
+  }
+  input {
+    width: 200px;
+    font-size: 0.8rem;
+  }
+  .edit-button {
+    font-size: 0.8rem;
+  }
+  .delete-button {
+    font-size: 0.8rem;
+  }
+}
