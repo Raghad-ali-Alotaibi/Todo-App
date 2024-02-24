@@ -7,8 +7,8 @@ const totalCounter = document.getElementById("total-counter");
 function updateCounters() {
   const totalTasks = document.querySelectorAll("li:not(.completed)").length;
   totalCounter.textContent = totalTasks;
-  // localStorage.setItem("total", JSON.stringify(totalTasks));
-  // localStorage.getItem("total");
+  localStorage.setItem("total", JSON.stringify(totalTasks));
+  localStorage.getItem("total");
 }
 
 // Add Event Listener for Form Submission
@@ -106,7 +106,7 @@ function saveTasksToLocalStorage() {
 // Loading Tasks from Local Storage on Page Load
 document.addEventListener("DOMContentLoaded", function () {
   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-  savedTasks.forEach((task) => {
-    addTask(task.text);
+  savedTasks.forEach((tasks) => {
+    addTask(tasks.text);
   });
 });
