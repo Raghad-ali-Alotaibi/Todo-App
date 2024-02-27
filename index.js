@@ -88,10 +88,8 @@ function addTask(task) {
       editButton.textContent = "Save";
     }
   });
-
   saveTasksToLocalStorage();
 }
-
 
 // Saving Tasks to Local Storage
 function saveTasksToLocalStorage() {
@@ -108,5 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
   savedTasks.forEach((tasks) => {
     addTask(tasks.text);
+    updateCounters()
   });
 });
