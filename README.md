@@ -21,3 +21,5 @@ This repository contains the code for a simple Todo application. It helps users 
 - **Add Task**: Type your task in the input field and press Enter to add it to the list.
 - **Mark as Completed**: Click on the checkbox next to a task to mark it as completed.
 - **Delete Task**: Click on the delete button to remove a task from the list.
+
+deployed link 🚀: https://65de110b31ea7109aee6e85a--illustrious-gecko-ef5763.netlify.app/
